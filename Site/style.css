@@ -1,0 +1,108 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    
+}
+
+body{
+    background: linear-gradient(135deg, #5a0ca3, #b872ff);
+}
+
+@font-face {
+    font-family: Bebas-Nue;
+    src: url('Fontes/BebasNeue-Regular_0.ttf');
+}
+
+/*calculator */
+
+.calculator{
+    width: 250px;
+    margin: auto;
+    background: #252525;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 25px #000000;
+}
+
+#display{
+    width: 100px;
+    height: 40px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    text-align: right;
+    font-family: sans-serif;
+    box-shadow: 0px 10px 25px #000000;
+}
+
+.buttons{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button{
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 10px 25px #000000;
+}
+
+
+/*loader */
+
+#loader {
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgb(37,37,37);
+    transition: opacity 0.5s ease;
+}
+
+.loader {
+    width: 250px;
+    height: 250px;
+    border: 9px solid rgb(37, 37, 37);
+    border-top: 9px solid #3498db;
+    border-radius: 100%;
+    animation: girar 4s linear infinite;
+}
+
+@keyframes girar {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.fade-out {
+    opacity: 0;
+}
+
+/* Conteúdo */
+
+#content {
+    color: #000000;
+    margin: auto;
+    width: 300px;
+    text-align: center;
+    opacity: 1;
+    transition: opacity 1s ease;
+    font-family: Bebas-Nue;
+    font-size: 50px;
+    box-shadow: 0px 10px 25px #000000;
+    text-shadow: 2px 2px 5px #000000;
+
+}
+
+.show{
+    opacity:1;
+}
